@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import PhoneNumberInput from "./components/numberInput/PhoneNumberInput";
+import MessageBody from "./components/messageBody/MessageBody";
+import { useState } from "react";
+import { Button } from "evergreen-ui";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [message, setMessageBody] = useState<string>("");
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div>{phoneNumber}</div>
+      <div>{message}</div>
+
+      <PhoneNumberInput
+        phoneNumber={phoneNumber}
+        setPhoneNumber={setPhoneNumber}
+      />
+      <MessageBody message={message} setMessageBody={setMessageBody} />
+      <Button marginRight={16} appearance="primary" intent="none">
+        Send Message
+      </Button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
