@@ -1,0 +1,23 @@
+{
+  "name": "message-server",
+  "version": "1.0.0",
+  "description": "The backend server for messaging service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0",
+    "twilio": "^4.14.0",
+    "dotenv": "^16.0.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
