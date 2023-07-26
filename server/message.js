@@ -5,11 +5,6 @@ dotenv.config()
 const client = twilio(process.env.accountSid, process.env.authToken);
 
 export const sendMessage = (req, res) => {
-    client.messages
-    .create({
-        body: 'Hi',
-        from: '+18883185969',
-        to: '+14245358393'
-    })
-    .then(message => res.json(message));
+    console.log(req.body);
+    client.messages.create(req.body).then((message) => res.json(message));
 }
