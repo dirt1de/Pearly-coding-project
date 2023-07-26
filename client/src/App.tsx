@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="AppWrapper">
       <div style={{ marginBottom: "40px" }}>
         <PhoneNumberInput
           setIsValidNumber={setIsValidNumber}
@@ -53,7 +53,7 @@ function App() {
           Send Message
         </Button>
       </div>
-    </>
+    </div>
   );
 }
 
